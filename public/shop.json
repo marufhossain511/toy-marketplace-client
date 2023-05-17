@@ -1,0 +1,63 @@
+[
+    {
+      "imageUrl": "https://m.media-amazon.com/images/I/61l60LHdhHL._AC_UL400_.jpg",
+      "name": "Spider Man",
+      "sellerName": "ToyMan",
+      "sellerEmail": "ema@john.com",
+      "subcategory": "marvel",
+      "price": "$19.99",
+      "rating": 4.5,
+      "quantityAvailable": 10
+    },
+    {
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7L1B_u_EmjRAGDgngyQGAPCdypHM02UwINw&usqp=CAU",
+      "name": "Thor",
+      "sellerName": "ToyMan",
+      "sellerEmail": "ema@john.com",
+      "subcategory": "marvel",
+      "price": "$29.99",
+      "rating": 4.2,
+      "quantityAvailable": 5
+    },
+    {
+      "imageUrl": "https://www.kapowtoys.co.uk/uploads/2020/12/shhulk1.jpg",
+      "name": "Hulk",
+      "sellerName": "ToyMan",
+      "sellerEmail": "ema@john.com",
+      "subcategory": "avengers",
+      "price": "$14.99",
+      "rating": 4.8,
+      "quantityAvailable": 8
+    },
+    {
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlEwto0NH-__h_nzEM-H0POD_jyzEoRBhurQ&usqp=CAU",
+      "name": "Iron Man",
+      "sellerName": "ToyMan",
+      "sellerEmail": "ema@john.com",
+      "subcategory": "avengers",
+      "price": "$39.99",
+      "rating": 4.6,
+      "quantityAvailable": 3
+    },
+    {
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvOQkLG-cRjaEIxhbz3FKrA8-AvGdAeHYzTw&usqp=CAU",
+      "name": "Princess Leia",
+      "sellerName": "ToyMan",
+      "sellerEmail": "ema@john.com",
+      "subcategory": "starwars",
+      "price": "$24.99",
+      "rating": 4.4,
+      "quantityAvailable": 12
+    },
+    {
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Yta_I3wAJfkuktdKHDl67pyJ20CpcCS1lg&usqp=CAU",
+      "name": "Luke Skywalker",
+      "sellerName": "ToyMan",
+      "sellerEmail": "ema@john.com",
+      "subcategory": "starwars",
+      "price": "$16.99",
+      "rating": 4.7,
+      "quantityAvailable": 6
+    }
+  ]
+  
