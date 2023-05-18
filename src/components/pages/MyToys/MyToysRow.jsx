@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaTrashAlt,FaEdit } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 const MyToysRow = ({toy,handleDelete}) => {
     const {_id,imageUrl,name,sellerName,sellerEmail,subcategory,price,rating,description,quantityAvailable}=toy || {}
     return (
@@ -35,7 +36,7 @@ const MyToysRow = ({toy,handleDelete}) => {
         </td>
         <td>
         <div className="btn-group btn-group-vertical">
-            <button className="btn btn-circle btn-outline mb-2"><FaEdit className='h-5 w-5'/></button>
+            <Link to={`/update/${_id}`}><button  className="btn btn-outline mb-2"><FaEdit className='h-5 w-4'/></button></Link>
             <button onClick={()=>handleDelete(_id)} className="btn btn-circle btn-outline"><FaTrashAlt
             className='h-5 w-5'/></button>
             </div>
