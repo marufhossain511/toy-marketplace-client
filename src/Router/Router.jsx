@@ -6,11 +6,13 @@ import Register from "../components/pages/Register/Register";
 import AllToys from "../components/pages/AllToys/AllToys";
 import ToyDetails from "../components/pages/ToyDetails/ToyDetails";
 import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../components/pages/ErrorPage/ErrorPage";
 
 const router=createBrowserRouter([
     {
         path:'/',
         element:<Main></Main>,
+        errorElement:<ErrorPage></ErrorPage>,
         children:[
             {
                 path:'/',

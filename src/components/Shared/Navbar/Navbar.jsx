@@ -53,7 +53,7 @@ const Navbar = () => {
             <img src={ photo?photo:'https://img.freepik.com/free-icon/man_318-233556.jpg?size=626&ext=jpg&ga=GA1.1.452690373.1680190369&semt=sph'} />
         </div>
            }
-            <a className="btn">Blogs</a>
+            <Link to='/blogs'><button className="btn btn-primary">Blogs</button></Link>
         </div>
         </div>
     );
