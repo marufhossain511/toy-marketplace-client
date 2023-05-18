@@ -48,9 +48,11 @@ const Navbar = () => {
             </ul>
         </div>
         <div className="navbar-end">
-            <div className="w-10 mr-2 rounded-full">
-                <img src={photo?photo:'https://img.freepik.com/free-icon/man_318-233556.jpg?size=626&ext=jpg&ga=GA1.1.452690373.1680190369&semt=sph'} />
-            </div>
+           {
+            user &&  <div className="w-10 mr-2 rounded-full">
+            <img src={ photo?photo:'https://img.freepik.com/free-icon/man_318-233556.jpg?size=626&ext=jpg&ga=GA1.1.452690373.1680190369&semt=sph'} />
+        </div>
+           }
             <a className="btn">Blogs</a>
         </div>
         </div>

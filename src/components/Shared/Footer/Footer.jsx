@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="flex flex-wrap">
           <div className="w-full md:w-1/4 lg:w-1/6 pr-4 mb-6 md:mb-0">
             <img src="https://img.freepik.com/free-psd/3d-puzzle-pieces_23-2148938940.jpg?w=740&t=st=1684339483~exp=1684340083~hmac=5bdcd149aa80aa5d4ec329d36835fa569a1caa1742706050684c1e6fae4707de" alt="Logo" className="h-10" />
-            <p className="mt-2">Your website description goes here.</p>
+            <p className="mt-2">Welcome to  Toy Man Discover a world of endless fun and excitement for children of all ages. We offer a diverse range of high-quality toys that encourage creativity, </p>
           </div>
           <div className="w-full md:w-1/4 md:text-center lg:w-2/4 mb-6 md:mb-0">
             <h3 className="text-lg font-semibold mb-2">Contact</h3>

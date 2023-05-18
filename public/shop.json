@@ -7,6 +7,7 @@
       "subcategory": "marvel",
       "price": "$19.99",
       "rating": 4.5,
+      "description":"Experience the thrill of being a superhero with our Spider-Man toy collection! Inspired by the iconic Marvel character, our Spider-Man toys bring the action-packed adventures of the web-slinger right into your hands. From action figures to playsets, we offer a wide range of Spider-Man toys that capture the essence of the beloved character. Swing into imaginative play with our high-quality figures, featuring intricate details and dynamic poses.",
       "quantityAvailable": 10
     },
     {
@@ -17,46 +18,51 @@
       "subcategory": "marvel",
       "price": "$29.99",
       "rating": 4.2,
+      "description":"Unleash the power of the mighty Thor with our thrilling collection of Thor toys! Inspired by the legendary Marvel superhero, these toys allow you to wield the strength and lightning of the God of Thunder. From action figures to role-playing accessories, our Thor toys bring the epic battles and heroic adventures to life. Feel the weight of Mjolnir in your hand as you join Thor in defending the realms against evil forces. Immerse yourself in the Marvel universe with highly detailed figures, complete with Thor's iconic armor and weapon. ",
       "quantityAvailable": 5
     },
     {
       "imageUrl": "https://www.kapowtoys.co.uk/uploads/2020/12/shhulk1.jpg",
       "name": "Hulk",
-      "sellerName": "ToyMan",
+      "sellerName": "Maruf",
       "sellerEmail": "ema@john.com",
       "subcategory": "avengers",
       "price": "$14.99",
       "rating": 4.8,
+      "description":"Get ready for unstoppable, smashing action with our Hulk toy collection! Inspired by the incredible Marvel character, our Hulk toys let you unleash the raw power and strength of the Green Goliath. From action figures to playsets, our Hulk toys capture the essence of the iconic superhero. Feel the adrenaline rush as you recreate epic battles or create your own destructive scenarios. With highly detailed figures showcasing Hulk's massive physique and ferocious expressions",
       "quantityAvailable": 8
     },
     {
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlEwto0NH-__h_nzEM-H0POD_jyzEoRBhurQ&usqp=CAU",
       "name": "Iron Man",
-      "sellerName": "ToyMan",
+      "sellerName": "Rifat",
       "sellerEmail": "ema@john.com",
       "subcategory": "avengers",
       "price": "$39.99",
       "rating": 4.6,
+      "description":"Experience the genius, technology, and heroic adventures of Iron Man with our incredible collection of Iron Man toys! Inspired by the iconic Marvel character, these toys bring the excitement of the armored Avenger right into your hands. From action figures to playsets, our Iron Man toys capture the high-tech essence and sleek design of Tony Stark's alter ego. Step into the shoes of Iron Man as you deploy the latest suits, complete with intricate details and powerful weaponry.",
       "quantityAvailable": 3
     },
     {
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvOQkLG-cRjaEIxhbz3FKrA8-AvGdAeHYzTw&usqp=CAU",
       "name": "Princess Leia",
-      "sellerName": "ToyMan",
+      "sellerName": "Maruf",
       "sellerEmail": "ema@john.com",
       "subcategory": "starwars",
       "price": "$24.99",
       "rating": 4.4,
+      "description":"Embark on a regal and inspiring journey with our Princess Leia toy collection! Inspired by the beloved Star Wars character, these toys capture the grace, bravery, and leadership of Princess Leia Organa. Join the Rebel Alliance and stand against the forces of the dark side with our Princess Leia action figures and playsets. With attention to detail and authentic styling, these toys bring Princess Leia's iconic looks and costumes to life. ",
       "quantityAvailable": 12
     },
     {
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Yta_I3wAJfkuktdKHDl67pyJ20CpcCS1lg&usqp=CAU",
       "name": "Luke Skywalker",
-      "sellerName": "ToyMan",
+      "sellerName": "Adit",
       "sellerEmail": "ema@john.com",
       "subcategory": "starwars",
       "price": "$16.99",
       "rating": 4.7,
+      "description":"Embark on an epic Jedi journey with our Luke Skywalker toy collection! Inspired by the iconic Star Wars character, these toys allow you to join the Rebel Alliance and embrace the Force. From action figures to lightsabers, our Luke Skywalker toys capture the essence of the legendary hero. Engage in thrilling battles against the dark side or train with Master Yoda to master your Jedi skills. ",
       "quantityAvailable": 6
     }
   ]
