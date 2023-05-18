@@ -1,6 +1,10 @@
 import React from 'react';
+import { useContext } from 'react';
+import { AuthContext } from '../../../Provider/AuthProvider';
 
 const AddToy = () => {
+
+    const {user}=useContext(AuthContext)
 
     const handleAddToy=(e)=>{
         e.preventDefault()
@@ -16,6 +20,18 @@ const AddToy = () => {
         const quantityAvailable=form.quantity.value
         const newToy={imageUrl,name,sellerName,sellerEmail,subcategory,price,rating,description,quantityAvailable}
         console.log(newToy); 
+        fetch('http://localhost:5000/allToys',{
+            method:'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(newToy)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data)
+            form.reset()
+        })
     }
 
     return (
@@ -45,7 +61,7 @@ const AddToy = () => {
                         <label className="label">
                             <span className="label-text">seller email</span>
                         </label>
-                        <input type="text" name='sellerEmail' placeholder="email" className="input input-bordered" />
+                        <input type="text" name='sellerEmail' defaultValue={user?.email} readOnly placeholder="email" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
