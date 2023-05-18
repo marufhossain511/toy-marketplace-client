@@ -19,7 +19,7 @@ const Navbar = () => {
     {
         user? <>
         <li className="font-semibold"><Link>My Toys</Link></li>
-        <li className="font-semibold"><Link>Add A Toy</Link></li>
+        <li className="font-semibold"><Link to="/addToy">Add A Toy</Link></li>
         <li className="font-semibold"><button onClick={handleLogOut}>Logout</button></li>
         </>:
        <li className="font-semibold"><Link to="/login">Login</Link></li>

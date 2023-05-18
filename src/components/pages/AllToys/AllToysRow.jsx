@@ -22,7 +22,7 @@ const AllToysRow = ({toy}) => {
                 </span>
               </td>
               <td className="px-6 py-4 whitespace-nowrap">
-                {price}
+                ${price}
               </td>
               <td className="px-10 py-4 whitespace-nowrap">
                 {quantityAvailable}

@@ -11,7 +11,7 @@ const ShopCard = ({data}) => {
     <figure><img className='pt-10  object-cover h-[34vh]' src={imageUrl} alt="toys" /></figure>
     <div className="card-body pt-0">
         <h2 className="card-title">{name}</h2>
-        <p className='font-medium'>Price: {price}</p>
+        <p className='font-medium'>Price: ${price}</p>
        <div className='flex font-medium items-center'>Rating:<span className='px-2'>{rating}</span> <Rating 
         style={{ maxWidth: 100 }}
         value={rating}

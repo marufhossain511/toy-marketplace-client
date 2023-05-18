@@ -30,7 +30,7 @@ const Shop = () => {
 
     return (
         <div>
-            <h1 className='text-5xl font-bold text-center my-10'>Shop By Category</h1>
+            <h1 className='text-5xl font-bold text-center my-10'>Shop By Category</h1>    
         <Tabs>
         <TabList>
             <Tab>Marvel</Tab>
