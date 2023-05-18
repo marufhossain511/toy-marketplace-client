@@ -1,13 +1,23 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Navbar = () => {
+
+    const {user,photo}=useContext(AuthContext)
+    console.log(photo);
 
     const navItems=<>
     <li className="font-semibold"><Link>Home</Link></li>
     <li className="font-semibold"><Link>All Toys</Link></li>
-    <li className="font-semibold"><Link>My Toys</Link></li>
-    <li className="font-semibold"><Link>Add A Toy</Link></li>
-    <li className="font-semibold"><Link to="/login">Login</Link></li>
+    {
+        user? <>
+        <li className="font-semibold"><Link>My Toys</Link></li>
+        <li className="font-semibold"><Link>Add A Toy</Link></li>
+        <li><button className="font-semibold ">Logout</button></li>
+        </>:
+       <li className="font-semibold"><Link to="/login">Login</Link></li>
+    }
     </>
 
     return (
@@ -32,8 +42,8 @@ const Navbar = () => {
             </ul>
         </div>
         <div className="navbar-end">
-            <div className="w-10 rounded-full">
-                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+            <div className="w-10 mr-2 rounded-full">
+                <img src={photo?photo:'https://img.freepik.com/free-icon/man_318-233556.jpg?size=626&ext=jpg&ga=GA1.1.452690373.1680190369&semt=sph'} />
             </div>
             <a className="btn">Blogs</a>
         </div>

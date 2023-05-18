@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Provider/AuthProvider';
 
 const Login = () => {
+
+    const {logIn}=useContext(AuthContext)
+
     const handleLogin=(e)=>{
         e.preventDefault()
         const form=e.target
         const email= form.email.value
         const password=form.password.value
         console.log(email,password);
+        logIn(email,password)
+        .then((result)=>{
+            console.log(result.user);
+        })
+        .catch((err)=>{
+            console.log(err.message);
+        })
     }
     return (
         <div className='md:flex w-full'>
