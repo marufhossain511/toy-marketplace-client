@@ -15,7 +15,7 @@ const Navbar = () => {
 
     const navItems=<>
     <li className="font-semibold"><Link>Home</Link></li>
-    <li className="font-semibold"><Link>All Toys</Link></li>
+    <li className="font-semibold"><Link to="/allToys">All Toys</Link></li>
     {
         user? <>
         <li className="font-semibold"><Link>My Toys</Link></li>
