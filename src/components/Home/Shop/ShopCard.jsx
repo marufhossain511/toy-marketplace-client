@@ -12,11 +12,11 @@ const ShopCard = ({data}) => {
     <div className="card-body pt-0">
         <h2 className="card-title">{name}</h2>
         <p className='font-medium'>Price: {price}</p>
-       <p className='flex font-medium'>Rating:<span className='px-2'>{rating}</span> <Rating 
+       <div className='flex font-medium items-center'>Rating:<span className='px-2'>{rating}</span> <Rating 
         style={{ maxWidth: 100 }}
         value={rating}
         readOnly
-        ></Rating></p>
+        ></Rating></div>
         <div className="card-actions justify-end">
         <Link to={`/details/${_id}`}><button className="btn btn-primary">View Details</button></Link>
         </div>
