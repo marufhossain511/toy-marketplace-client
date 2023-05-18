@@ -1,6 +1,7 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Login = () => {
 
@@ -9,6 +10,7 @@ const Login = () => {
     // console.log(location);
     const from=location.state?.from?.pathname || '/'
     const navigate=useNavigate()
+    const [err,setErr]=useState('')
 
     const handleLogin=(e)=>{
         e.preventDefault()
@@ -16,13 +18,25 @@ const Login = () => {
         const email= form.email.value
         const password=form.password.value
         console.log(email,password);
+        setErr('')
         logIn(email,password)
         .then((result)=>{
-            console.log(result.user);
+             const loggedUser =result.user;
+             if(loggedUser){
+                                
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'login successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            }
             navigate(from,{replace:true})
         })
         .catch((err)=>{
             console.log(err.message);
+            setErr(err.message)
         })
     }
     return (
@@ -44,8 +58,8 @@ const Login = () => {
                             <span className="label-text">Password</span>
                         </label>
                         <input type="password" name='password' placeholder="password" className="input input-bordered" />
-                        <label className="label">
-                            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                        <label className="label text-red-500">
+                            {err}
                         </label>
                         </div>
                         <div className="form-control mt-6">
