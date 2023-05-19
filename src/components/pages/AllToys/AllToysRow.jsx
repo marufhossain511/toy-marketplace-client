@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const AllToysRow = ({toy}) => {
+const AllToysRow = ({toy,handleModal}) => {
     const {_id,imageUrl,name,sellerName,sellerEmail,subcategory,price,rating,description,quantityAvailable}=toy || {}
     // console.log(toy);
     return (
@@ -28,7 +28,7 @@ const AllToysRow = ({toy}) => {
                 {quantityAvailable}
               </td>
               <td className="px-6 py-4 whitespace-nowrap">
-                <Link to={`/details/${_id}`}><button className="btn btn-outline">
+                <Link to={`/details/${_id}`}><button onClick={handleModal} className="btn btn-outline">
                   View Details
                 </button></Link>
               </td>

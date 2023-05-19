@@ -7,21 +7,21 @@ const Shop = () => {
     const [avengers,setAvengers]=useState([])
     const [starWars,setStarWars]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/getToysByCategory/marvel')
+        fetch('https://toys-marketplace-server-pi.vercel.app/getToysByCategory/marvel')
         .then(res=>res.json())
         .then(data=>{
             setMarvel(data)
         })
     },[])
     useEffect(()=>{
-        fetch('http://localhost:5000/getToysByCategory/avengers')
+        fetch('https://toys-marketplace-server-pi.vercel.app/getToysByCategory/avengers')
         .then(res=>res.json())
         .then(data=>{
             setAvengers(data)
         })
     },[])
     useEffect(()=>{
-        fetch('http://localhost:5000/getToysByCategory/starwars')
+        fetch('https://toys-marketplace-server-pi.vercel.app/getToysByCategory/starwars')
         .then(res=>res.json())
         .then(data=>{
             setStarWars(data)

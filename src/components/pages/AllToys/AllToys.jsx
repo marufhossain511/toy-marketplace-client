@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import AllToysRow from './AllToysRow';
+import { AuthContext } from '../../../Provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const AllToys = () => {
 
+    const {user}=useContext(AuthContext)
     const [toys,setToys]=useState([])
 
     useEffect(()=>{
-        fetch('http://localhost:5000/allToys')
+        fetch('https://toys-marketplace-server-pi.vercel.app/allToys')
         .then(res=>res.json())
         .then(data=>{
             setToys(data);
@@ -17,12 +20,24 @@ const AllToys = () => {
         e.preventDefault()
         const form=e.target
         const search=form.search.value
-        fetch(`http://localhost:5000/getToysBySearch/${search}`)
+        fetch(`https://toys-marketplace-server-pi.vercel.app/getToysBySearch/${search}`)
         .then(res=>res.json())
         .then(data=>{
             setToys(data)
             form.reset()
         })
+    }
+
+    const handleModal=()=>{
+        if(!user){
+            Swal.fire({
+                position: 'center',
+                icon: 'error',
+                title: 'You have to log in first to view details',
+                showConfirmButton: false,
+                timer: 1500
+            })  
+        }
     }
 
     return (
@@ -66,6 +81,7 @@ const AllToys = () => {
                         toys.map(toy=><AllToysRow
                         key={toy._id}
                         toy={toy}
+                        handleModal={handleModal}
                         ></AllToysRow>)
                     }
                 </tbody>

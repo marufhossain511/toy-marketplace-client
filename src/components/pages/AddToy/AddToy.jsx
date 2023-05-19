@@ -21,7 +21,7 @@ const AddToy = () => {
         const quantityAvailable=form.quantity.value
         const newToy={imageUrl,name,sellerName,sellerEmail,subcategory,price,rating,description,quantityAvailable}
         console.log(newToy); 
-        fetch('http://localhost:5000/allToys',{
+        fetch('https://toys-marketplace-server-pi.vercel.app/allToys',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

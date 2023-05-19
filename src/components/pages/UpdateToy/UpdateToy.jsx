@@ -13,7 +13,7 @@ const UpdateToy = () => {
         const quantity=form.quantity.value
         const description=form.description.value
         const updatedToy={price,quantity,description};
-        fetch(`http://localhost:5000/allToys/${_id}`,{
+        fetch(`https://toys-marketplace-server-pi.vercel.app/allToys/${_id}`,{
             method:'PATCH',
             headers:{
                 'content-type':'application/json'
