@@ -4,6 +4,7 @@ import Gallary from '../Gallary/Gallary';
 import Shop from '../Shop/Shop';
 import Speciality from '../Speciality/Speciality';
 import useTitle from '../../../Hooks/useTitle';
+import CustomersReview from '../CustomersReview/CustomersReview';
 
 const Home = () => {
     useTitle('| Home')
@@ -13,6 +14,7 @@ const Home = () => {
             <Gallary></Gallary>
             <Shop></Shop>
             <Speciality></Speciality>
+            <CustomersReview></CustomersReview>
         </div>
     );
 };
