@@ -13,7 +13,7 @@ const MyToys = () => {
          .then(data=>{
             setToys(data);
          })
-    },[url])
+    },[user?.email])
 
     const handleDelete=(_id)=>{
         Swal.fire({

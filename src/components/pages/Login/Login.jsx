@@ -9,15 +9,15 @@ const Login = () => {
     const location=useLocation()
     const from=location.state?.from?.pathname || '/'
     console.log();
-    if(location.state){
-        Swal.fire({
-            position: 'center',
-            icon: 'error',
-            title: 'You have to log in first to view details',
-            showConfirmButton: false,
-            timer: 1500
-        })
-    }
+    // if(location.state){
+    //     Swal.fire({
+    //         position: 'center',
+    //         icon: 'error',
+    //         title: 'You have to log in first to view details',
+    //         showConfirmButton: false,
+    //         timer: 1500
+    //     })
+    // }
     const navigate=useNavigate()
     const [err,setErr]=useState('')
 

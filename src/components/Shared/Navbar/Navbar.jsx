@@ -4,9 +4,10 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Navbar = () => {
 
-    const {user,photo,logOut}=useContext(AuthContext)
+    const {user,photo,logOut,name}=useContext(AuthContext)
     // console.log(photo);
 
+    console.log(name);
     const handleLogOut=()=>{
         logOut()
         .then(()=>{})
@@ -50,8 +51,11 @@ const Navbar = () => {
         <div className="navbar-end">
            {
             user &&  <div className="w-10 mr-2 rounded-full">
-            <img src={ photo?photo:'https://img.freepik.com/free-icon/man_318-233556.jpg?size=626&ext=jpg&ga=GA1.1.452690373.1680190369&semt=sph'} />
-        </div>
+                      <div class="tooltip" data-tip={name}>
+                     <img src={ photo?photo:'https://img.freepik.com/free-icon/man_318-233556.jpg?size=626&ext=jpg&ga=GA1.1.452690373.1680190369&semt=sph'} />
+                        
+                        </div>
+                    </div>
            }
             <Link to='/blogs'><button className="btn btn-primary">Blogs</button></Link>
         </div>

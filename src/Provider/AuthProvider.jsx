@@ -8,8 +8,9 @@ const AuthProvider = ({children}) => {
   const [user,setUser]=useState(null)
   const [loading,setLoading]=useState(true)
   const [photo,setPhoto]=useState()
-
+  const [name,setName]=useState()
     const signUp=(email,password,name,photo)=>{
+      setName(name)
       setLoading(true)
       setPhoto(photo)
       return createUserWithEmailAndPassword(auth,email,password)
@@ -38,7 +39,8 @@ const AuthProvider = ({children}) => {
           user,
           logIn,
           logOut,
-          loading
+          loading,
+          name
         }
     return (<AuthContext.Provider value={authInfo}>
               {children}
