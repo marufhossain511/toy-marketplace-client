@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Navbar = () => {
@@ -15,15 +15,15 @@ const Navbar = () => {
     }
 
     const navItems=<>
-    <li className="font-semibold"><Link>Home</Link></li>
-    <li className="font-semibold"><Link to="/allToys">All Toys</Link></li>
+    <li className="font-semibold"><NavLink to="/" className={({isActive})=>(isActive ? " text-primary" : "text-black")}>Home</NavLink></li>
+    <li className="font-semibold"><NavLink to="/allToys" className={({isActive})=>(isActive ? " text-primary" : "")}>All Toys</NavLink></li>
     {
         user? <>
-        <li className="font-semibold"><Link to="/myToys">My Toys</Link></li>
-        <li className="font-semibold"><Link to="/addToy">Add A Toy</Link></li>
+        <li className="font-semibold"><NavLink to="/myToys" className={({isActive})=>(isActive ? " text-primary" : "")}>My Toys</NavLink></li>
+        <li className="font-semibold"><NavLink to="/addToy" className={({isActive})=>(isActive ? " text-primary" : "")}>Add A Toy</NavLink></li>
         <li className="font-semibold"><button onClick={handleLogOut}>Logout</button></li>
         </>:
-       <li className="font-semibold"><Link to="/login">Login</Link></li>
+       <li className="font-semibold"><NavLink to="/login" className={({isActive})=>(isActive ? " text-primary" : "")}>Login</NavLink></li>
     }
     </>
 
