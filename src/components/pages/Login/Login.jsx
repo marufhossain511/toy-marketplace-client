@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
 
@@ -9,15 +10,6 @@ const Login = () => {
     const location=useLocation()
     const from=location.state?.from?.pathname || '/'
     console.log();
-    // if(location.state){
-    //     Swal.fire({
-    //         position: 'center',
-    //         icon: 'error',
-    //         title: 'You have to log in first to view details',
-    //         showConfirmButton: false,
-    //         timer: 1500
-    //     })
-    // }
     const navigate=useNavigate()
     const [err,setErr]=useState('')
 
@@ -53,7 +45,7 @@ const Login = () => {
             <div className='md:w-2/4'>
               <img className='h-[400px] sm:h-full' src="https://i.ibb.co/S5m7fDv/Tablet-login-amico.png" alt="" />
             </div>
-            <div className='md:mt-40 my-5 md:w-2/4'>
+            <div className='md:mt-24  md:w-2/4'>
             <h1 className="text-5xl font-bold ml-8">Login now!</h1>
                 <form onSubmit={handleLogin} className="card-body md:w-3/4 w-full ">
                         <div className="form-control">
@@ -71,11 +63,13 @@ const Login = () => {
                             {err}
                         </label>
                         </div>
-                        <div className="form-control mt-6">
+                        <div className="form-control mt-2">
                         <input className='btn btn-block btn-primary' type="submit" value="Login" />
                         </div>
-                            <p className='my-2'>Do not have an account? <Link to="/register" className='text-red-500'>Sign Up</Link></p>
+                        <p className='mt-2'>Do not have an account? <Link to="/register" className='text-red-500'>Sign Up</Link></p>
                  </form>
+                 <div className="divider w-3/4">OR</div>
+                 <SocialLogin></SocialLogin>
             </div>
         </div>
     );

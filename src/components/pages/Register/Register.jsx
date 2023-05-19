@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
 
@@ -44,7 +45,7 @@ const Register = () => {
         <div className='md:w-2/4'>
           <img src="https://i.ibb.co/vZCncP7/Mobile-login-pana.png" alt="" />
         </div>
-        <div className='md:mt-36 my-5 md:w-2/4'>
+        <div className='md:mt-20  md:w-2/4'>
         <h1 className="text-5xl font-bold ml-8">Sign Up!</h1>
             <form onSubmit={handleRegister} className="card-body h-2/4 md:w-3/4 w-full ">
                     <div className="form-control">
@@ -79,6 +80,10 @@ const Register = () => {
                     </div>
                     <p className='my-2'>Already have an account? <Link to="/login" className='text-red-500'>Login</Link></p>
              </form>
+            <div className='mb-6 ml-8 sm:mt-36'>
+            <div className="divider w-3/4">OR</div>
+             <SocialLogin></SocialLogin>
+            </div>
         </div>
     </div>
     );
