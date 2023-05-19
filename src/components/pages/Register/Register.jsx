@@ -3,9 +3,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import useTitle from '../../../Hooks/useTitle';
 
 const Register = () => {
-
+    useTitle('| SignUp')
     const {signUp}=useContext(AuthContext)
     const [err,setErr]=useState('')
     const navigate=useNavigate()
