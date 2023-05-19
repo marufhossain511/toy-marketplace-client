@@ -6,7 +6,7 @@ import '@smastrom/react-rating/style.css'
 const ShopCard = ({data}) => {
     const {_id,imageUrl,name,price,rating}=data
     return (
-        <div className=''>
+        <div>
         <div className="card w-full card-side bg-base-100 shadow-2xl mx-4">
         <figure><img className='pt-10  object-cover h-[30vh]' src={imageUrl} alt="Movie"/></figure>
         <div className="card-body mt-7 ">

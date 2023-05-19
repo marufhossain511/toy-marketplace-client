@@ -51,7 +51,7 @@ const Login = () => {
     return (
         <div className='md:flex w-full'>
             <div className='md:w-2/4'>
-              <img className='' src="https://i.ibb.co/S5m7fDv/Tablet-login-amico.png" alt="" />
+              <img className='h-[400px] sm:h-full' src="https://i.ibb.co/S5m7fDv/Tablet-login-amico.png" alt="" />
             </div>
             <div className='md:mt-40 my-5 md:w-2/4'>
             <h1 className="text-5xl font-bold ml-8">Login now!</h1>
