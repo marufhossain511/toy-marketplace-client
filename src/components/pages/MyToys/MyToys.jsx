@@ -50,6 +50,7 @@ const MyToys = () => {
 
     return (
         <div>
+          <h2 className='text-3xl font-bold text-center my-5'>My Toys</h2>
             <div className="overflow-x-auto w-full my-10 md:px-14">
   <table className="table w-full">
     {/* head */}

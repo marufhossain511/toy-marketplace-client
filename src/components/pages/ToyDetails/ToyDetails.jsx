@@ -9,7 +9,7 @@ const ToyDetails = () => {
     const {_id,imageUrl,name,sellerName,sellerEmail,subcategory,price,rating,description,quantityAvailable}=toy || {}
     return (
         <div className="card m-8 mt-16 bg-base-100 shadow-xl">
-        <figure><img className='h-64 pt-3 rounded' src={imageUrl} alt="Movie"/></figure>
+        <figure><img className='h-80 w-80 pt-3 rounded' src={imageUrl} alt="Movie"/></figure>
         <div className="card-body px-10">
             <h2 className="card-title">Name: {name}</h2>
             <p className='text-lg font-semibold'>Seller Name: {sellerName}</p>
