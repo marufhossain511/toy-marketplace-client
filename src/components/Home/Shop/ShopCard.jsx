@@ -28,9 +28,9 @@ const ShopCard = ({data}) => {
     }
     return (
         <div>
-        <div  data-aos="fade-up"  className="card w-full card-side bg-base-100 shadow-2xl mx-4">
-        <figure><img className='pt-10  object-cover h-[40vh]' src={imageUrl} alt="Movie"/></figure>
-        <div className="card-body mt-20 ">
+        <div  data-aos="fade-up"  className="card h-80 w-full card-side bg-base-100 shadow-2xl mx-4">
+        <figure><img className='pt-10   object-cover h-[40vh]' src={imageUrl} alt="Movie"/></figure>
+        <div className="card-body mt-14 ">
             <h2 className="card-title">Name: {name}</h2>
             <p>Price: ${price}</p>
             <div className='flex mb-10 font-medium  items-center'>Rating:<span className='px-2'>{rating}</span> <Rating 
