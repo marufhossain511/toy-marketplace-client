@@ -8,14 +8,30 @@ const MyToys = () => {
   useTitle('| My Toys')
     const {user}=useContext(AuthContext)
     const [toys,setToys]=useState([])
+    const [value,setValue]=useState('')
+    console.log(value);
+    
+    const handleSort=(e)=>{
+      e.preventDefault()
+      setValue('')
+      const form=e.target
+      const selectValue=form.selectValue.value
+      // console.log(selectValue);
+      setValue(selectValue)
+    }
     const url =`https://toys-marketplace-server-pi.vercel.app/getToysByEmail/${user?.email}`
     useEffect(()=>{
-         fetch(url)
+         fetch(url,{
+          method:'GET',
+          headers:{
+            value:value
+          }
+         })
          .then(res=>res.json())
          .then(data=>{
             setToys(data);
          })
-    },[user?.email])
+    },[user?.email,value])
 
     const handleDelete=(_id)=>{
         Swal.fire({
@@ -48,10 +64,26 @@ const MyToys = () => {
         
     }
 
+    
+
     return (
         <div>
           <h2 className='text-3xl font-bold text-center my-5'>My Toys</h2>
-            <div className="overflow-x-auto w-full my-10 md:px-14">
+
+                  <div className="form-control w-full mx-auto max-w-xs">
+                  <label className="label">
+                    <span className="label-text pl-2 font-medium">Sort By Price</span>
+                  </label>
+                  <form onSubmit={handleSort}>
+                  <select name='selectValue' className="w-48 select select-bordered">
+                    <option>ascending</option>
+                    <option>descending</option>
+                  </select>
+                   <input className='btn btn-square' type="submit" value="sort" />
+                  </form>
+                </div>
+              
+          <div className="overflow-x-auto w-full my-10 md:px-14">
   <table className="table w-full">
     {/* head */}
     <thead>

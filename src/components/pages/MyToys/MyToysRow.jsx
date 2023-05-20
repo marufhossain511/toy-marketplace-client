@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaTrashAlt,FaEdit } from 'react-icons/fa';
+import { FaTrashAlt,FaEdit, FaEye } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 const MyToysRow = ({toy,handleDelete}) => {
     const {_id,imageUrl,name,sellerName,sellerEmail,subcategory,price,rating,description,quantityAvailable}=toy || {}
@@ -37,6 +37,7 @@ const MyToysRow = ({toy,handleDelete}) => {
         <td>
         <div className="btn-group btn-group-vertical">
             <Link to={`/update/${_id}`}><button  className="btn btn-outline mb-2"><FaEdit className='h-5 w-4'/></button></Link>
+            <Link to={`/details/${_id}`}><button  className="btn btn-outline mb-2"><FaEye className='h-5 w-4'/></button></Link>
             <button onClick={()=>handleDelete(_id)} className="btn btn-circle btn-outline"><FaTrashAlt
             className='h-5 w-5'/></button>
             </div>
