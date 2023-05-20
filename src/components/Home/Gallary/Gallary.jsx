@@ -10,7 +10,7 @@ const Gallary = () => {
           });
       }, [])
       return (
-      <div className="my-10 sm:mx-8">
+      <div className="my-10 sm:mx-20">
         <h2 className="text-4xl my-6 font-bold text-center">Gallery</h2>
         {/* col 1 */}
           <div className="grid grid-cols-1 grid-flow-row-dense sm:grid-cols-3 gap-x-2 gap-y-3">

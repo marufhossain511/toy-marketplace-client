@@ -1,8 +1,10 @@
 import React from 'react';
+import useTitle from '../../../Hooks/useTitle';
 
 const Blogs = () => {
+     useTitle('| Blogs')
     return (
-        <div className='mx-4 sm:mx-32 my-20'>
+        <div className='mx-4 sm:mx-32 shadow-xl p-8 my-20'>
             <h2 className='text-3xl text-center font-bold mb-10'>Bl<span className='text-primary'>ogs</span></h2>
            <div className='mb-10'>
                 <h1 className='text-xl text-primary font-bold'>Q:What is an access token and refresh token? How do they work and where should we store them on the client-side?</h1>

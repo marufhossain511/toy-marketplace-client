@@ -29,7 +29,7 @@ const Shop = () => {
     },[])
 
     return (
-        <div>
+        <div className='sm:mx-20'>
             <h1 className='text-5xl font-bold text-center my-10'>Shop By Category</h1>    
         <Tabs>
         <TabList>
@@ -38,7 +38,7 @@ const Shop = () => {
             <Tab>Star Wars</Tab>
         </TabList>
             <TabPanel>
-             <div className='my-20 mx-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+             <div className='my-20  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
              {
                 marvels.map(marvel=><ShopCard
                 key={marvel._id}
@@ -48,7 +48,7 @@ const Shop = () => {
              </div>
             </TabPanel>
             <TabPanel>
-            <div className='my-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+            <div className='my-20  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
              {
                 avengers.map(marvel=><ShopCard
                 key={marvel._id}
@@ -58,7 +58,7 @@ const Shop = () => {
              </div>
             </TabPanel>
             <TabPanel>
-            <div className='my-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+            <div className='my-20  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
              {
                 starWars.map(marvel=><ShopCard
                 key={marvel._id}
