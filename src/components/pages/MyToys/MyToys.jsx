@@ -69,7 +69,6 @@ const MyToys = () => {
     return (
         <div>
           <h2 className='text-3xl font-bold text-center my-5'>My Toys</h2>
-
                   <div className="form-control w-full mx-auto max-w-xs">
                   <label className="label">
                     <span className="label-text pl-2 font-medium">Sort By Price</span>
